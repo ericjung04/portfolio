@@ -1,0 +1,32 @@
+.hero{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    
+}
+
+.picture{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img{
+    width: 400px;
+
+}
+
+.hello{
+    text-align: left;
+    width: 100%;
+    font-size: 1.45rem;
+}
+
+.main-text{
+    padding: 10px;
+    width: 50%;
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-left: -10px;
+}
