@@ -5,7 +5,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="my-navbar">
       <div className="nav-inner">
 
         <div className='nav-left'>
