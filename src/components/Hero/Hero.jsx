@@ -22,9 +22,11 @@ function Hero() {
 
         <div className="hero-buttons">
             <Button variant="primary"
+             className="rounded-pill"
              onClick={() => (window.open(resume))}>My Resume!
              </Button>
             <Button variant="primary"
+             className="rounded-pill"
              onClick={() => document.getElementById("contact").scrollIntoView({behavior : "smooth"})}>Contact Information
              </Button>
         </div>

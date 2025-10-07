@@ -19,7 +19,6 @@
     color: white;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 .nav-left .name:hover {
@@ -39,9 +38,10 @@
 .nav-right .links a{
     font-size: 1.70rem;
     font-weight: 600;
-    text-decoration: none;
     opacity: 0.9;
     color: white;
+    text-decoration: none;
+    /* text-underline-offset: 8px; */
 }
 
 .mobile-menu{
