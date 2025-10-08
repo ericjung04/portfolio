@@ -14,10 +14,6 @@ body{
   background-size: cover;
 }
 
-.hero{
-  margin-top: -3rem;
-}
-
 .btn,
 .btn-primary {
   font-family: "Poppins", sans-serif;

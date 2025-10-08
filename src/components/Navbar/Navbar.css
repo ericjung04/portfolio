@@ -1,24 +1,28 @@
 .my-navbar{
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: transparent;
-    padding: 50px 0;
+  position: sticky;
+  top: 1vh;                 
+  z-index: 50;
+  background: transparent;
+  padding: clamp(1rem, 3vh, 2.5rem) 0; 
+  width: 100%;
 }
 
 .nav-inner {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;         
   align-items: center;
-  padding: 0 120px;
+  max-width: 2200px;                       
+  margin: 0 auto;
+  padding: 0 clamp(5rem, 12vw, 18rem);    
+  box-sizing: border-box;
 }
 
 .nav-left .name{
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+  font-size: clamp(1.25rem, 1.2vw + 0.6rem, 2rem);
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-left .name:hover {
@@ -28,50 +32,20 @@
 }
 
 .nav-right .links{
-    display: flex;
-    gap: 45px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);          
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-right .links a{
-    font-size: 1.70rem;
-    font-weight: 600;
-    opacity: 0.9;
-    color: white;
-    text-decoration: none;
-    /* text-underline-offset: 8px; */
-}
-
-.mobile-menu{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px) saturate(140%);
-    padding: 12px 24px;
-}
-
-.mobile-menu a{
-    padding: 10px 0;
-    color: white;
-    text-decoration: none;
-}
-
-.mobile-menu.open{
-    display: flex;
-    flex-direction: column;
-}
-
-.hamburger-menu{
-    display: none;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    padding: 8px;
+  font-size: clamp(1rem, 0.9vw + 0.6rem, 1.7rem);
+  font-weight: 600;
+  opacity: 0.9;
+  color: white;
+  text-decoration: none;
+  transition: opacity .2s ease;
 }
 
 .nav-right .links a:hover {
@@ -80,16 +54,53 @@
   text-underline-offset: 8px;
 }
 
-.hamburger-menu .bar{
-    display: block;
-    width: 24px;
-    height: 2px;
-    margin: 5px 0;
-    background: white;
+/* Mobile menu */
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px) saturate(140%);
+  padding: 12px clamp(1rem, 5vw, 2rem);
 }
 
+.mobile-menu a{
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-menu.open{
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu{
+  display: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-menu .bar{
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background: white;
+}
+
+/* Mid screens tighten gutters a bit */
+@media (max-width: 1200px) {
+  .nav-inner { padding: 0 clamp(1rem, 4vw, 5rem); }
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .nav-right .links { display: none; }
   .hamburger-menu { display: inline-block; }
-  .nav-inner { padding: 0 24px; }
+  .nav-inner { padding: 0 1.25rem; }
+  .my-navbar { padding: clamp(.75rem, 2vh, 1.5rem) 0; }
 }
